@@ -24,8 +24,44 @@ const Bday = document.getElementById('Mydate');
 const LangSelect = document.getElementById('Myselect');
 
 function Myonclick(){
-    console.log("ชื่อจริง :",Fname.value);
-    console.log("นาสสกุล :",Lname.value);
-    console.log("วันเกิด :",Bday.value);
-    console.log("ภาษาที่คูณเลือก :",LangSelect.value);
+    const displayvalue = document.getElementById('yourvalue');
+    displayvalue.innerText = Fname.value+","+Lname.value+","+Bday.value+","+LangSelect.value;
 }
+
+const Inname = document.getElementById('Inname');
+const Insurname = document.getElementById('Insurname');
+const InBdate = document.getElementById('InBdate');
+const SelectL = document.getElementById('SelectL');
+
+function changeName(){
+    if(Fname.value == ""){
+    Inname.innerText="Insert Name";
+    }else{
+        Inname.innerText="";
+    };
+}
+function changeSurname(){
+    if(Lname.value == ""){
+        Insurname.innerText="Insert Surname";
+    }else{
+        Insurname.innerText="";
+    };
+}
+function changeDate(){
+    if(Bday.value == ""){
+        InBdate.innerText="Insert Birth date";
+    }else{
+        InBdate.innerText="";
+    };
+}
+function changeOption(){
+    if(LangSelect.value == ""){
+        SelectL.innerText="Select Language";
+    }else{
+        SelectL.innerText="";
+    };
+}
+
+
+
+

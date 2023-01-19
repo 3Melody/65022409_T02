@@ -11,19 +11,19 @@
         <div class="container">
             <div class="displayflex">
                 <h3>Name</h3>
-                <input type="text" placeholder="โปรดใส่ชื่อของคุณ" id="InputName" onfocus="Myfocus1()" onblur="Myblur1()">
+                <input type="text" placeholder="โปรดใส่ชื่อของคุณ" id="InputName" onfocus="Myfocus1()" onblur="Myblur1()" onchange="changeName()">
             </div>
             <div class="displayflex">
                 <h3>Surname</h3>
-                <input type="text" placeholder="โปรดใส่นามสกุลของคุณ" id="InputSurname" onfocus="Myfocus2()" onblur="Myblur2()"></div>
+                <input type="text" placeholder="โปรดใส่นามสกุลของคุณ" id="InputSurname" onfocus="Myfocus2()" onblur="Myblur2()" onchange="changeSurname()"></div>
             <div class="centerflex">
                 <h3>Date of Birth</h3>
-                <input type="date" value="" id="Mydate">
+                <input type="date" value="" id="Mydate" onchange="changeDate()">
             </div>
             <div class="displayflex">
                 <h3>Select your language</h3>
-                <select name="" id="Myselect">
-                    <option value="Select">--Select--</option>
+                <select name="" id="Myselect" onchange="changeOption()">
+                    <option value="">--Select--</option>
                     <option value="C">C</option>
                     <option value="Java">Java</option>
                     <option value="javaScript">javaScript</option>
@@ -31,7 +31,14 @@
                 </select>
             </div>
             <div class="mycenter"><input type="submit" value="Submit" class="btn" onclick="Myonclick()"></div>
+            <div>
+                <h5 id="Inname" class="red_color">Insert Name</h5>
+                <h5 id="Insurname" class="red_color">Insert Surname</h5>
+                <h5 id="InBdate" class="red_color">Insert Birth date</h5>
+                <h5 id="SelectL" class="red_color">Select Language</h5>
+            </div>
         </div >
+        <div><h3 id="yourvalue" style="color: green;"></h3></div>
     <script src="myscript.js"></script>
 </body>
 </html>
